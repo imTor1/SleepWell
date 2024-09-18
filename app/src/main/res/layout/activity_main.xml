@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Well Cheak"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อายุ"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เพศ"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_array"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อาหารการกิน"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinnerDietaryHabits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/dietary_habits_array" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ความผิดปกติของการนอนหลับ"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinnerSleepDisorders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/sleep_disorders_array"
+             />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="การใช้ยา"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinnerMedicationUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/medication_usage_array"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เวลานอน"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editTextBedtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ใส่เฉพาะเลขชั่วโมงเช่น 22:00(สี่ทุ่ม) = 22"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เวลาตื่น"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editTextWakeupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ใส่เฉพาะเลขชั่วโมงเช่น 7:00(เจ็ดโมงเช้า) = 7 "
+            android:inputType="number"/>
+
+
+        <Spinner
+            android:id="@+id/spinnerSleepQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/sleep_quality_array"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ก้าวเดิน(จำนวนก้าวต่อวัน)"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editTextDailySteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Daily Steps"
+            android:inputType="number"
+             />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ออกกำลังกาย"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+
+        <Spinner
+            android:id="@+id/spinnerPhysicalActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/physical_activity_array"
+            />
+
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submit" />
+    </LinearLayout>
+</ScrollView>
