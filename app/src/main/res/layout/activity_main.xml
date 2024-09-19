@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView to allow scrolling if content exceeds screen size -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
 
+    <!-- Main container LinearLayout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,55 +17,58 @@
         android:padding="16dp"
         android:gravity="center_horizontal">
 
-
+        <!-- Title TextView -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sleep Well Cheak"
-            android:textSize="30dp"
-            android:textColor="@color/black"/>
+            android:text="Sleep Well Check"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
 
-
+        <!-- Age Label and Input -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="อายุ"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/editTextAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Age"
-            android:inputType="number" />
+            android:hint="กรุณาใส่อายุของคุณ"
+            android:inputType="number"
+            android:maxLength="3" />
 
-
+        <!-- Gender Label and Spinner -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="เพศ"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <Spinner
             android:id="@+id/spinnerGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/gender_array"/>
+            android:entries="@array/gender_array" />
 
+        <!-- Dietary Habits Label and Spinner -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="อาหารการกิน"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <Spinner
             android:id="@+id/spinnerDietaryHabits"
@@ -70,120 +76,97 @@
             android:layout_height="wrap_content"
             android:entries="@array/dietary_habits_array" />
 
+        <!-- Sleep Disorders Label and Spinner -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ความผิดปกติของการนอนหลับ"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <Spinner
             android:id="@+id/spinnerSleepDisorders"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/sleep_disorders_array"
-             />
+            android:entries="@array/sleep_disorders_array" />
 
-
+        <!-- Medication Usage Label and Spinner -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="การใช้ยา"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <Spinner
             android:id="@+id/spinnerMedicationUsage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/medication_usage_array"/>
-
+            android:entries="@array/medication_usage_array" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="เวลานอน"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:text="เวลาการนอนหลับ (1-10)"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <EditText
-            android:id="@+id/editTextBedtime"
+            android:id="@+id/editTextSleepQuality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ใส่เฉพาะเลขชั่วโมงเช่น 22:00(สี่ทุ่ม) = 22"
-            android:inputType="number" />
+            android:hint="กรุณาให้คะแนนคุณภาพการนอนของคุณ (1-10)"
+            android:inputType="number"
+            android:maxLength="2" />
 
+        <!-- Daily Steps Label and Input -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="เวลาตื่น"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
-
-        <EditText
-            android:id="@+id/editTextWakeupTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ใส่เฉพาะเลขชั่วโมงเช่น 7:00(เจ็ดโมงเช้า) = 7 "
-            android:inputType="number"/>
-
-
-        <Spinner
-            android:id="@+id/spinnerSleepQuality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/sleep_quality_array"
-             />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ก้าวเดิน(จำนวนก้าวต่อวัน)"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
+            android:text="จำนวนก้าวเดินต่อวัน"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/editTextDailySteps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Daily Steps"
+            android:hint="กรุณาใส่จำนวนก้าวที่เดินต่อวัน"
             android:inputType="number"
-             />
+            android:maxLength="7" />
 
-
+        <!-- Physical Activity Level Label and Spinner -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ออกกำลังกาย"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
-
+            android:text="ระดับการออกกำลังกาย"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
         <Spinner
             android:id="@+id/spinnerPhysicalActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/physical_activity_array"
-            />
+            android:entries="@array/physical_activity_array" />
 
-
+        <!-- Submit Button -->
         <Button
             android:id="@+id/buttonSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Submit" />
+            android:text="ตรวจสอบสุขภาพการนอน"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 </ScrollView>
